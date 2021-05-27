@@ -8,10 +8,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 14.x
       - name: Get npm cache directory
         id: npm-cache
         run: |
@@ -22,9 +22,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: npm install, build, and test
+      - name: install dependencies and test
         run: |
           npm ci
-          npm run build --if-present
-        env:
-          CI: true
+          npm run test

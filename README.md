@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/mateus4k/currency-to-float/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mateus4k/currency-to-float/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/mateus4k/currency-to-float/branch/main/graph/badge.svg?token=KQUaHGJkaV)](https://codecov.io/gh/mateus4k/currency-to-float)
-[![npm version](https://badge.fury.io/js/currency-to-float.svg)](https://badge.fury.io/js/currency-to-float)
+[![npm version](https://img.shields.io/npm/v/currency-to-float)](https://www.npmjs.com/package/currency-to-float)
 
 The main purpose of this package is to turn any currency into a number, **without having to specify the currency source.**
 

@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/mateus4k/currency-to-float/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mateus4k/currency-to-float/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/mateus4k/currency-to-float/branch/main/graph/badge.svg?token=KQUaHGJkaV)](https://codecov.io/gh/mateus4k/currency-to-float)
+[![npm version](https://badge.fury.io/js/currency-to-float.svg)](https://badge.fury.io/js/currency-to-float)
 
 <!-- The main purpose of this repository is to show a working Node.js API Server + front-end project and workflow for writing Node code in TypeScript. -->
 

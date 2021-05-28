@@ -12,7 +12,7 @@
 | --------------------------- | :----------: | :------------: | :-------------: |
 | US Dollar ($, USD)          |    en-US     |   $12.50 USD   |      12.5       |
 | US Dollar ($, USD)          |    en-US     |    $12 USD     |       12        |
-| Brasilian Real (R$, BRL)    |    pt-BR     |    R$ 14,99    |      14.99      |
+| Brasilian Real (R$, BRL)    |    pt-BR     |    R$ 12,50    |      12.5       |
 | Canadian Dollar ($, CAD)    |    en-CA     |   $12.50 CAD   |      12.5       |
 | Canadian Dollar ($, CAD)    |    fr-CA     |  12,50 $ CAD   |      12.5       |
 | Australian Dollar ($, AUD)  |    en-AU     |   $12.50 AUD   |      12.5       |

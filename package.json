@@ -10,6 +10,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "prepublish": "tsc",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles --maxWorkers=50%",
     "test:ci": "jest --forceExit --coverage --verbose --detectOpenHandles --runInBand",

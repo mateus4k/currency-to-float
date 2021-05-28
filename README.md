@@ -1,5 +1,7 @@
 # currency-parser.js
 
+[![build](https://github.com/mateus4k/currency-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/mateus4k/currency-parser/actions/workflows/ci.yml)
+
 <!-- The main purpose of this repository is to show a working Node.js API Server + front-end project and workflow for writing Node code in TypeScript. -->
 
 <!-- **Live Demo**: [https://typescript-node-starter.azurewebsites.net/](https://typescript-node-starter.azurewebsites.net/) -->

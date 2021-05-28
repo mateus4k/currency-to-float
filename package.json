@@ -1,6 +1,6 @@
 {
   "name": "currency-to-float",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parse any currency",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
   "type": "module",
   "scripts": {
     "prepublish": "tsc",
+    "build": "tsc",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles --maxWorkers=50%",
     "test:ci": "jest --forceExit --coverage --verbose --detectOpenHandles --runInBand",

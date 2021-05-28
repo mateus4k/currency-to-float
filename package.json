@@ -1,6 +1,6 @@
 {
   "name": "currency-to-float",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parse any currency",
   "repository": {
     "type": "git",
@@ -8,6 +8,7 @@
   },
   "author": "Mateus Sampaio",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles --maxWorkers=50%",

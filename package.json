@@ -30,11 +30,12 @@
     "url": "https://github.com/mateus4k/currency-to-float/issues"
   },
   "homepage": "https://github.com/mateus4k/currency-to-float#readme",
-  "main": "src/index.ts",
   "directories": {
     "test": "test",
     "src": "src"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "currency",
     "currencies",

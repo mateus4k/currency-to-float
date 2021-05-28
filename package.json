@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
-    "test": "jest --forceExit --coverage --verbose",
+    "test": "jest --forceExit --coverage --verbose --detectOpenHandles",
     "test:watch": "jest --watch --maxWorkers=25%"
   },
   "dependencies": {},

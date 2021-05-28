@@ -4,11 +4,33 @@
 [![codecov](https://codecov.io/gh/mateus4k/currency-to-float/branch/main/graph/badge.svg?token=KQUaHGJkaV)](https://codecov.io/gh/mateus4k/currency-to-float)
 [![npm version](https://badge.fury.io/js/currency-to-float.svg)](https://badge.fury.io/js/currency-to-float)
 
-<!-- The main purpose of this repository is to show a working Node.js API Server + front-end project and workflow for writing Node code in TypeScript. -->
+The main purpose of this package is to turn any currency into a number, **without having to specify the currency source.**
 
-<!-- **Live Demo**: [https://typescript-node-starter.azurewebsites.net/](https://typescript-node-starter.azurewebsites.net/) -->
+## Usage
 
-## Currency examples
+- Install the package
+
+```sh
+npm install currency-to-float
+# or
+yarn add currency-to-float
+```
+
+- Import the package
+
+```ts
+const { parse } = require('currency-to-float');
+// or
+import { parse } from 'currency-to-float';
+```
+
+- Transform any currency in number
+
+```ts
+const value = parse('R$ 1.000,00'); // 1000
+```
+
+## Supported Currencies
 
 | Currency                    |    Locale    | Input (string) | Output (Number) |
 | --------------------------- | :----------: | :------------: | :-------------: |
@@ -27,21 +49,6 @@
 | Hong Kong Dollar ($, HKD)   |    zh-HK     |   $12.50 HKD   |      12.5       |
 | Singapore Dollar ($, SGD)   |    zh-SG     |   $12.50 SGD   |      12.5       |
 | Danish Krone (Kr, DKK)      |    da-DK     | 12,50 kr. DKK  |      12.5       |
-
-## Getting started
-
-- Clone the repository
-
-```
-git clone https://github.com/mateus4k/currency-to-float.git
-```
-
-- Install dependencies
-
-```
-cd currency-to-float
-npm install
-```
 
 ## License
 

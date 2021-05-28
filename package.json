@@ -1,6 +1,6 @@
 {
   "name": "currency-to-float",
-  "version": "1.0.3",
+  "version": "1.0.9",
   "description": "Parse any currency",
   "repository": {
     "type": "git",
@@ -8,10 +8,9 @@
   },
   "author": "Mateus Sampaio",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "prepublish": "tsc",
-    "build": "tsc",
+    "prepublish": "npm run build",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles --maxWorkers=50%",
     "test:ci": "jest --forceExit --coverage --verbose --detectOpenHandles --runInBand",
@@ -28,21 +27,15 @@
     "ts-jest": "26.5.0",
     "typescript": "4.1.3"
   },
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "files": [
+    "lib/"
+  ],
   "bugs": {
     "url": "https://github.com/mateus4k/currency-to-float/issues"
   },
   "homepage": "https://github.com/mateus4k/currency-to-float#readme",
-  "directories": {
-    "test": "test",
-    "src": "src"
-  },
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
-  ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "keywords": [
     "currency",
     "currencies",

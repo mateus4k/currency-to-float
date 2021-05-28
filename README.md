@@ -6,12 +6,36 @@
 
 <!-- **Live Demo**: [https://typescript-node-starter.azurewebsites.net/](https://typescript-node-starter.azurewebsites.net/) -->
 
-# Getting started
+## Currency examples
+
+| Currency                    |    Locale    | Input (string) | Output (Number) |
+| --------------------------- | :----------: | :------------: | :-------------: |
+| US Dollar ($, USD)          |    en-US     |   $12.50 USD   |      12.5       |
+| US Dollar ($, USD)          |    en-US     |    $12 USD     |       12        |
+| Brasilian Real (R$, BRL)    |    pt-BR     |    R$ 14,99    |      14.99      |
+| Canadian Dollar ($, CAD)    |    en-CA     |   $12.50 CAD   |      12.5       |
+| Canadian Dollar ($, CAD)    |    fr-CA     |  12,50 $ CAD   |      12.5       |
+| Australian Dollar ($, AUD)  |    en-AU     |   $12.50 AUD   |      12.5       |
+| Euro (€, EUR)               | de-DE, fr-FR |  12,50 € EUR   |      12.5       |
+| Euro (€, EUR)               |    en-IE     |   €12.50 EUR   |      12.5       |
+| Euro (€, EUR)               |    nl-NL     |   €12,50 EUR   |      12.5       |
+| British Pounds (£, GBP)     |    en-GB     |   £12.50 GBP   |      12.5       |
+| Japanese Yen (¥, JPY)       |    ja-JP     |   ¥1250 JPY    |      1250       |
+| New Zealand Dollar ($, NZD) |    en-NZ     |   $12.50 NZD   |      12.5       |
+| Hong Kong Dollar ($, HKD)   |    zh-HK     |   $12.50 HKD   |      12.5       |
+| Singapore Dollar ($, SGD)   |    zh-SG     |   $12.50 SGD   |      12.5       |
+| Danish Krone (Kr, DKK)      |    da-DK     | 12,50 kr. DKK  |      12.5       |
+
+## Getting started
+
 - Clone the repository
+
 ```
 git clone https://github.com/mateus4k/currency-parser.git
 ```
+
 - Install dependencies
+
 ```
 cd currency-parser
 npm install

@@ -9,7 +9,7 @@
   "author": "Mateus Sampaio",
   "license": "MIT",
   "scripts": {
-    "prepublish": "npm run build",
+    "publish": "npm run build && npm publish",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles --maxWorkers=50%",

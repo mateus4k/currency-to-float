@@ -1,6 +1,6 @@
 {
   "name": "currency-to-float",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Parse any currency",
   "repository": {
     "type": "git",

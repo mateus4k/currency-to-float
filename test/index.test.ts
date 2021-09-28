@@ -24,6 +24,7 @@ test.each([
   ['R$ 12.50', 12.5],
   ['$ 1.200,50', 1200.5],
   ['$ 1,200.50', 1200.5],
+  ['$123,456,789,00', 123456789],
 ])('parse("%s") === %f', (input, expected) => {
   const parsed = parse(input);
   expect(parsed).toBe(expected);

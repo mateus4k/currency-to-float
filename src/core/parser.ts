@@ -10,7 +10,7 @@ export function parse(input: string): number {
   let value: string;
 
   // replace all commas by dot
-  value = input.replace(',', '.');
+  value = input.replace(/,/g, '.');
 
   // remove all chars that is different to number or dot
   value = value.replace(/(\D)*([\d+[,.]*\d+]*)(\D*)/, '$2');

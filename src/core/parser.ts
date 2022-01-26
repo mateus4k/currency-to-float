@@ -9,8 +9,11 @@
 export function parse(input: string): number {
   let value: string;
 
+  // replace last hyphen with 00
+  value = input.replace(/,-(?!.*,-)/g, ',00');
+
   // replace all commas by dot
-  value = input.replace(/,/g, '.');
+  value = value.replace(/,/g, '.');
 
   // remove all chars that is different to number or dot
   value = value.replace(/(\D)*([\d+[,.]*\d+]*)(\D*)/, '$2');

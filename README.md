@@ -1,36 +1,31 @@
-# currency-to-float.js
+# CurrencyToFloat
 
 [![CI](https://github.com/mateus4k/currency-to-float/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mateus4k/currency-to-float/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/mateus4k/currency-to-float/branch/main/graph/badge.svg?token=KQUaHGJkaV)](https://codecov.io/gh/mateus4k/currency-to-float)
-[![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/currency-to-float)](https://snyk.io/vuln)
-[![bundlephobia](https://img.shields.io/bundlephobia/min/currency-to-float?label=bundle%20size)](https://bundlephobia.com/result?p=currency-to-float)
-[![npm version](https://img.shields.io/npm/v/currency-to-float)](https://www.npmjs.com/package/currency-to-float)
+[![bundle size](https://img.shields.io/bundlephobia/min/currency-to-float?label=bundle%20size)](https://bundlephobia.com/result?p=currency-to-float)
 
+The `currency-to-float` package is a **dependency-free** utility designed to convert currency values into numerical representations **without** the need to specify the source currency.
 
-The main purpose of this package is to turn any currency into a number, **without having to specify the currency source.**
+## Installation
 
-## Usage
-
-- Install the package
+You can install `currency-to-float` using npm or any other package manager:
 
 ```sh
 npm install currency-to-float
-# or
-yarn add currency-to-float
 ```
 
-- Import the package
+## Usage
 
 ```ts
+// ESM
+import currencyToFloat from 'currency-to-float';
+
+// CommonJs
 const { parse } = require('currency-to-float');
-// or
-import { parse } from 'currency-to-float';
-```
 
-- Transform any currency in number
+const value = currencyToFloat('R$ 1.000,00');
 
-```ts
-const value = parse('R$ 1.000,00'); // 1000
+console.log(value); // 1000
 ```
 
 ## Supported Currencies
@@ -55,5 +50,4 @@ const value = parse('R$ 1.000,00'); // 1000
 
 ## License
 
-Copyright (c) 2021 Mateus Sampaio. All rights reserved.
-Licensed under the [MIT](LICENSE) License.
+This package is open-source and available under the [MIT](LICENSE) License.

@@ -1,6 +1,6 @@
 # CurrencyToFloat
 
-[![CI](https://github.com/mateus4k/currency-to-float/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mateus4k/currency-to-float/actions/workflows/ci.yml)
+[![CI](https://github.com/mateus4k/currency-to-float/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/mateus4k/currency-to-float/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/mateus4k/currency-to-float/branch/main/graph/badge.svg?token=KQUaHGJkaV)](https://codecov.io/gh/mateus4k/currency-to-float)
 [![bundle size](https://img.shields.io/bundlephobia/min/currency-to-float?label=bundle%20size)](https://bundlephobia.com/result?p=currency-to-float)
 

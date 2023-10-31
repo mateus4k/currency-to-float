@@ -1,15 +1,12 @@
 name: Tests
-on:
-  push:
-    tags:
-      - '**'
+on: [push, pull_request]
 jobs:
   build-node:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Use Node.js 18.x
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 18.x
       - name: Get npm cache directory
@@ -28,7 +25,7 @@ jobs:
         run: npm run lint
       - name: Run tests
         run: npm run test:ci
-      - name: Publish
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true

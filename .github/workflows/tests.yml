@@ -29,6 +29,6 @@ jobs:
       - name: Run tests
         run: npm run test:ci
       - name: Publish
-        run: |
-          npm config set _authToken=${{ NPM_TOKEN }}
-          npm run publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

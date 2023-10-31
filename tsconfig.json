@@ -6,9 +6,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./lib/esm",
-    "moduleResolution": "Node",
-    "declaration": true
+    "moduleResolution": "Node"
   },
   "include": ["./src"]
 }

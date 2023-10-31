@@ -48,6 +48,16 @@ console.log(value); // 1000
 | Singapore Dollar ($, SGD)   |    zh-SG     |   $12.50 SGD   |      12.5       |
 | Danish Krone (Kr, DKK)      |    da-DK     | 12,50 kr. DKK  |      12.5       |
 
+## Benchmark
+
+Run locally with `npm run benchmark`
+
+```sh
+currencyToFloat x 165,114 ops/sec ±5.96% (72 runs sampled)
+currency.js x 143,757 ops/sec ±7.27% (66 runs sampled)
+Fastest is currencyToFloat
+```
+
 ## License
 
 This package is open-source and available under the [MIT](LICENSE) License.

@@ -1,7 +1,7 @@
 # CurrencyToFloat
 
 [![CI](https://github.com/mateus4k/currency-to-float/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/mateus4k/currency-to-float/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/mateus4k/currency-to-float/branch/main/graph/badge.svg?token=KQUaHGJkaV)](https://codecov.io/gh/mateus4k/currency-to-float)
+[![code coverage](https://codecov.io/gh/mateus4k/currency-to-float/branch/main/graph/badge.svg?token=KQUaHGJkaV)](https://codecov.io/gh/mateus4k/currency-to-float)
 [![bundle size](https://img.shields.io/bundlephobia/min/currency-to-float?label=bundle%20size)](https://bundlephobia.com/result?p=currency-to-float)
 
 The `currency-to-float` package is a **dependency-free** utility designed to convert currency values into numerical representations **without** the need to specify the source currency.
@@ -33,8 +33,7 @@ console.log(value); // 1000
 | Currency                    |    Locale    | Input (string) | Output (Number) |
 | --------------------------- | :----------: | :------------: | :-------------: |
 | US Dollar ($, USD)          |    en-US     |   $12.50 USD   |      12.5       |
-| US Dollar ($, USD)          |    en-US     |    $12 USD     |       12        |
-| Brasilian Real (R$, BRL)    |    pt-BR     |    R$ 12,50    |      12.5       |
+| Brazilian Real (R$, BRL)    |    pt-BR     |    R$ 12,50    |      12.5       |
 | Canadian Dollar ($, CAD)    |    en-CA     |   $12.50 CAD   |      12.5       |
 | Canadian Dollar ($, CAD)    |    fr-CA     |  12,50 $ CAD   |      12.5       |
 | Australian Dollar ($, AUD)  |    en-AU     |   $12.50 AUD   |      12.5       |

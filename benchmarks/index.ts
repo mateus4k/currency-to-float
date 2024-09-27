@@ -35,6 +35,6 @@ suite
     console.log(String(event.target));
   })
   .on('complete', function () {
-    console.log('Fastest is ' + this.filter('fastest').map('name'));
+    console.log(`Fastest is ${this.filter('fastest').map('name')}`);
   })
-  .run({ async: true, minTime: 60 });
+  .run({ async: true, minTime: 100 });

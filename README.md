@@ -17,15 +17,13 @@ npm install currency-to-float
 ## Usage
 
 ```ts
-// ESM
 import currencyToFloat from 'currency-to-float';
+// Or use CommonJs:
+// const { parse } = require('currency-to-float');
 
-// CommonJs
-const { parse } = require('currency-to-float');
+const value = currencyToFloat('$12.50 USD');
 
-const value = currencyToFloat('R$ 1.000,00');
-
-console.log(value); // 1000
+console.log(value); // 12.5
 ```
 
 ## Supported Currencies
@@ -52,8 +50,8 @@ console.log(value); // 1000
 Run locally with `npm run benchmark`
 
 ```sh
-currencyToFloat x 165,114 ops/sec ±5.96% (72 runs sampled)
-currency.js x 143,757 ops/sec ±7.27% (66 runs sampled)
+currencyToFloat x 235,939 ops/sec ±1.10% (92 runs sampled)
+currency.js x 204,132 ops/sec ±2.87% (89 runs sampled)
 Fastest is currencyToFloat
 ```
 

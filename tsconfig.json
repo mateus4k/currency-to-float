@@ -6,7 +6,13 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "Node"
+    "moduleResolution": "bundler",
+    "types": [
+      "bun-types"
+    ]
   },
-  "include": ["./src"]
+  "include": [
+    "./src",
+    "./test"
+  ]
 }

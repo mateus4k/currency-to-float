@@ -8,10 +8,12 @@ The `currency-to-float` package is a **dependency-free** utility designed to con
 
 ## Installation
 
-You can install `currency-to-float` using npm or any other package manager:
+You can install `currency-to-float` using bun, npm or any other package manager:
 
 ```sh
 npm install currency-to-float
+# or
+bun add currency-to-float
 ```
 
 ## Usage
@@ -47,13 +49,16 @@ console.log(value); // 12.5
 
 ## Benchmark
 
-Run locally with `npm run benchmark`
+Run locally with `bun benchmark`
+
+**🚀 ~30x faster than currency.js**
 
 ```sh
-currencyToFloat x 235,939 ops/sec ±1.10% (92 runs sampled)
-currency.js x 204,132 ops/sec ±2.87% (89 runs sampled)
+currencyToFloat x 16,751,726 ops/sec ±2.17% (88 runs sampled)
+currency.js x 544,712 ops/sec ±4.40% (90 runs sampled)
 Fastest is currencyToFloat
 ```
+
 
 ## License
 

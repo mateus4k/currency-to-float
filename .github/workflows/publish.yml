@@ -1,33 +1,44 @@
-name: Publish
+name: Publish Package
+
 on:
   push:
     tags:
       - '**'
+
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
-  build-node:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 20.x
-        uses: actions/setup-node@v3
+      
+      # Setup Bun for Build & Test
+      - name: Use Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20.x
-          registry-url: 'https://registry.npmjs.org/'
-      - name: Get npm cache directory
-        id: npm-cache
-        run: |
-          echo "::set-output name=dir::$(npm config get cache)"
-      - uses: actions/cache@v1
+          bun-version: latest
+
+      # Setup Node for Publishing (OIDC/Auth)
+      - uses: actions/setup-node@v4
         with:
-          path: ${{ steps.npm-cache.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+
+      # Install & Build using Bun (Project requires Bun)
       - name: Install dependencies
-        run: npm ci
-      - name: Run tests
-        run: npm run test
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        run: bun run build
+
+      - name: Test
+        run: bun test
+
+      # Publish using npm (for OIDC support)
       - name: Publish
-        run: npm run publish
+        run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

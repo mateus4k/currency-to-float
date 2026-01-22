@@ -6,15 +6,18 @@ const inputs = [
   { input: '$12.50 USD', output: 12.5 },
   { input: '$12 USD', output: 12 },
   { input: '$12.50 CAD', output: 12.5 },
+  { input: '-$12.50 USD', output: -12.5 },
 ];
 
 type Runner = (input: string) => number;
 
-const runTest = (runner: Runner) => {
+const runTest = (runner: Runner, name: string) => {
   for (const { input, output } of inputs) {
     const result = runner(input);
     if (result !== output) {
-      console.error(`invalid: ${result} should be ${output}`);
+      console.debug(
+        `[ERROR] ${name}(${input}) => ${result}, but should be ${output}`,
+      );
     }
   }
 };
@@ -26,15 +29,15 @@ const suite = new Benchmark.Suite();
 
 suite
   .add('currencyToFloat', () => {
-    runTest(currencyToFloatRunner);
+    runTest(currencyToFloatRunner, 'currencyToFloat');
   })
   .add('currency.js', () => {
-    runTest(currencyJsRunner);
+    runTest(currencyJsRunner, 'currencyJs');
   })
-  .on('cycle', (event) => {
+  .on('cycle', (event: Benchmark.Event) => {
     console.log(String(event.target));
   })
-  .on('complete', function () {
+  .on('complete', function (this: Benchmark.Suite) {
     console.log(`Fastest is ${this.filter('fastest').map('name')}`);
   })
   .run({ async: true, minTime: 100 });

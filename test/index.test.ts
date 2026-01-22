@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'bun:test';
 import lib, { parse } from '../src';
 
 const inputs = [
@@ -29,10 +30,17 @@ const inputs = [
   { input: '$ 1.200,50', output: 1200.5 },
   { input: '$ 1,200.50', output: 1200.5 },
   { input: '$123,456,789,00', output: 123456789 },
+  { input: '-$12.50 USD', output: -12.5 },
+  { input: '-12,50 €', output: -12.5 },
+  { input: '-R$ 1.200,50', output: -1200.5 },
+  { input: '$ -12.50', output: -12.5 },
+  { input: '-¥1250 JPY', output: -1250 },
+  { input: '-12.500,- €', output: -12500 },
+  { input: '$ -50.00', output: -50 },
 ];
 
 describe('parse function', () => {
-  it.each(inputs)('parse("%s") === %f', ({ input, output }) => {
+  it.each(inputs)('parse("$input") === $output', ({ input, output }) => {
     const parsed = parse(input);
     expect(parsed).toBe(output);
   });
